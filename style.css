@@ -1,0 +1,69 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7efe6; /* Light cream background */
+    margin: 0;
+    padding: 0;
+    color: #fff9f9;
+    text-align: center;
+}
+
+header {
+    padding: 50px;
+    background-color: #db935d; /* Light peach background */
+    border-bottom: 2px solid #ffcc99; /* Add a subtle border */
+}
+
+h1 {
+    font-family: 'Jua', sans-serif;
+    font-size: 4em;
+    color: #d63f60;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #fffdfd;
+}
+
+/* Grid Container for Sections */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.grid-item {
+    background-color: #daaf5f; /* White background for each section */
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px); /* Small lift effect on hover */
+}
+
+.grid-item h2 {
+    font-size: 1.8em;
+    color: #d6783f; /* Same soft orange as title */
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    color: #b53d3d;
+    font-size: 1em;
+}
+
+/* Footer */
+footer {
+    background-color: #ffcc99;
+    padding: 10px;
+    color: #333;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
