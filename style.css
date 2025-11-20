@@ -1,69 +1,190 @@
-/* General Styles */
+/* --------------------------------------------------
+   GLOBAL STYLES
+-------------------------------------------------- */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f7efe6; /* Light cream background */
+    background-color: #f7efe6; /* Soft cream */
     margin: 0;
     padding: 0;
-    color: #fff9f9;
+    color: #5b3d3d; /* Warm soft brown text */
     text-align: center;
 }
 
+/* Hide elements */
+.hidden {
+    display: none;
+}
+
+/* --------------------------------------------------
+   PASSWORD SCREEN
+-------------------------------------------------- */
+#lock-screen {
+    padding: 60px 20px;
+    max-width: 450px;
+    margin: 100px auto;
+    background-color: #fff4ea;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+#lock-screen h1 {
+    font-family: 'Jua', sans-serif;
+    font-size: 3em;
+    color: #d63f60;
+    margin-bottom: 10px;
+}
+
+#lock-screen p {
+    font-size: 1.2em;
+    color: #b15a5a;
+    margin-bottom: 20px;
+}
+
+#password-input {
+    width: 70%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 2px solid #f0b28a;
+    font-size: 16px;
+    outline: none;
+    background-color: #fffdf9;
+}
+
+#enter-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 40px;
+    background-color: #d63f60;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#enter-button:hover {
+    transform: translateY(-3px);
+}
+
+#error-msg {
+    color: #ef3b3b;
+    margin-top: 10px;
+}
+
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
 header {
-    padding: 50px;
-    background-color: #db935d; /* Light peach background */
-    border-bottom: 2px solid #ffcc99; /* Add a subtle border */
+    padding: 50px 20px;
+    background-color: #db935d; /* peachy background */
+    border-bottom: 3px solid #ffcc99;
 }
 
 h1 {
     font-family: 'Jua', sans-serif;
     font-size: 4em;
     color: #d63f60;
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-p {
-    font-size: 1.2em;
+header p {
     color: #fffdfd;
+    font-size: 1.3em;
 }
 
-/* Grid Container for Sections */
+/* --------------------------------------------------
+   NAVIGATION
+-------------------------------------------------- */
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #7d2e2e;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d63f60;
+}
+
+/* --------------------------------------------------
+   GRID LAYOUT FOR SECTIONS
+-------------------------------------------------- */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
     padding: 40px;
 }
 
 .grid-item {
-    background-color: #daaf5f; /* White background for each section */
+    background-color: #fff4dc;
     border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    padding: 25px;
     transition: transform 0.2s ease;
 }
 
 .grid-item:hover {
-    transform: translateY(-10px); /* Small lift effect on hover */
+    transform: translateY(-8px);
 }
 
 .grid-item h2 {
     font-size: 1.8em;
-    color: #d6783f; /* Same soft orange as title */
+    color: #d6783f;
     margin-bottom: 10px;
 }
 
 .grid-item p {
-    color: #b53d3d;
-    font-size: 1em;
+    color: #8a3f3f;
+    font-size: 1.1em;
 }
 
-/* Footer */
+/* --------------------------------------------------
+   NEWSLETTER SUBSCRIBE FORM
+-------------------------------------------------- */
+#subscribe-form {
+    margin-top: 20px;
+}
+
+#email-input {
+    padding: 12px;
+    width: 60%;
+    border-radius: 25px;
+    border: 2px solid #e0a173;
+    background-color: #fffdf9;
+}
+
+#subscribe-form button {
+    padding: 12px 25px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #d63f60;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#subscribe-form button:hover {
+    transform: translateY(-3px);
+}
+
+#subscribe-msg {
+    margin-top: 12px;
+    color: #b35757;
+    font-size: 1.1em;
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
 footer {
     background-color: #ffcc99;
-    padding: 10px;
-    color: #333;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 15px;
+    color: #4d2b2b;
+    font-weight: bold;
+    margin-top: 30px;
+    border-top: 2px solid #ffb87d;
 }

@@ -5,35 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Literally Just a Girl</title>
 
-    <!-- Preconnect for faster Google Font loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Link to the Google Font Jua -->
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <!-- Your CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
-<body>
-    <header>
-        <h1>Literally Just a Girl</h1>
-        <p>A cozy space for girls to explore, connect, and grow!</p>
-        <nav>
-            <a href="#penpals">Pen Pals</a>
-            <a href="#shopping">Shopping Sales</a>
-            <a href="#therapy">Therapy</a>
-        </nav>
-    </header>
 
-    <section>
-        <div id="penpals">
-            <h2>Pen Pals</h2>
-            <img src="penpal.jpg" alt="Pen pals writing letters">
-            <p>Make friends from across the world through letters!</p>
-        </div>
-        <div id="shopping">
-            <h2>Shopping Sales</h2>
-            <p>Find the cutest items on sale, curated just for you.</p>
-        </div>
-        <div id="therapy">
-            <h2>Therapy
+<body>
+
+    <!-- 🔒 PASSWORD SCREEN -->
+    <div id="lock-screen">
+        <h1>Literally Just a Girl 💌</h1>
+        <p>This is a cozy, private girlhood space. Enter the password:</p>
+
+        <input id="password-input" type="password" placeholder="enter password">
+        <button id="enter-button">Enter</button>
+
+        <p id="error-msg" class="error"></p>
+    </div>
+
+
+    <!-- 🔓 MAIN CONTENT (Hidden at first) -->
+    <div id="main-content" class="hidden">
+
+        <!-- HEADER -->
+        <header>
+            <h1>Literally Just a Girl</h1>
+            <p>A cozy space for girls to explore, connect, and grow.</p>
+
+            <nav>
+                <a href="#penpals">Pen Pals</a>
+                <a href="#shopping">Shopping</a>
+                <a href="#therapy">Therapy</a>
+            </nav>
+        </header>
+
+
+        <!-- MAIN SECTIONS -->
+        <section class="grid-container">
+
+            <!-- Penpals Section -->
+            <div id="penpals" class="grid-item">
+                <h2>Pen Pals</h2>
+                <p>Make friends from across the world through letters!</p>
+            </div>
+
+            <!-- Shopping Section -->
+            <div id="shopping" class="grid-item">
+                <h2>Shopping Finds 🛍️</h2>
+                <p>Find the cutest items on sale, curated just for you.</p>
+            </div>
+
+            <!-- Therapy Section -->
+            <div id="therapy" class="grid-item">
+                <h2>Therapy Thoughts 🌱</h2>
+                <p>A place for mental health, soft reflection, and real talk.</p>
+            </div>
+
+        </section>
+
+
+        <!-- NEWSLETTER SUBSCRIBE FORM -->
+        <section>
+            <h2>Join the Newsletter 💌</h2>
+            <p>Drop your email to join Waffle Wednesday & weekly updates:</p>
+
+            <form id="subscribe-form">
+                <input type="email" id="email-input" placeholder="your email" required>
+                <button type="submit">Subscribe</button>
+                <p id="subscribe-msg"></p>
+            </form>
+
+            <!-- OPTIONAL: Instead of the form above, you can embed a Google Form -->
+            <!-- <iframe src="YOUR_GOOGLE_FORM_EMBED_URL" width="100%" height="500" frameborder="0"></iframe> -->
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <p>made with love & overthinking 🧠❤️</p>
+        </footer>
+
+    </div> <!-- end main content -->
+
+
+    <!-- Your JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
