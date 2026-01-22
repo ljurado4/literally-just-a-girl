@@ -78,3 +78,30 @@ if (subscribeForm) {
     }
   });
 }
+
+const newsletterForm = document.getElementById("newsletter-form");
+const newsletterMsg = document.getElementById("newsletter-msg");
+const newsletterEmail = document.getElementById("newsletter-email");
+
+if (newsletterForm) {
+  newsletterForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const email = newsletterEmail ? newsletterEmail.value.trim() : "";
+
+    if (!email) {
+      if (newsletterMsg) {
+        newsletterMsg.textContent = "add an email so I can find you 💌";
+      }
+      return;
+    }
+
+    if (newsletterMsg) {
+      newsletterMsg.textContent = "you are subscribed! see you in the Friday letter.";
+    }
+
+    if (newsletterEmail) {
+      newsletterEmail.value = "";
+    }
+  });
+}

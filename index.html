@@ -5,93 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Literally Just a Girl</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- Your CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="page">
+        <!-- 🔒 PASSWORD SCREEN -->
+        <div id="lock-screen" class="card">
+            <p class="eyebrow">Private space</p>
+            <h1>Literally Just a Girl 💌</h1>
+            <p>This is my cozy corner to share updates, stories, and weekly newsletters.</p>
 
-    <!-- 🔒 PASSWORD SCREEN -->
-    <div id="lock-screen">
-        <h1>Literally Just a Girl 💌</h1>
-        <p>This is a cozy, private girlhood space. Enter the password:</p>
+            <div class="password-row">
+                <input id="password-input" type="password" placeholder="enter password">
+                <button id="enter-button" class="button">Enter</button>
+            </div>
 
-        <input id="password-input" type="password" placeholder="enter password">
-        <button id="enter-button">Enter</button>
+            <p id="error-msg" class="error"></p>
+        </div>
 
-        <p id="error-msg" class="error"></p>
+        <!-- 🔓 MAIN CONTENT (Hidden at first) -->
+        <div id="main-content" class="hidden">
+            <header class="site-header">
+                <div class="brand">
+                    <span class="brand-mark">LJAG</span>
+                    <div>
+                        <h2>Literally Just a Girl</h2>
+                        <p class="brand-subtitle">Updates, notes, and soft chaos.</p>
+                    </div>
+                </div>
+                <nav class="site-nav">
+                    <a href="#updates">Now</a>
+                    <a href="#posts">Blog</a>
+                    <a href="#newsletter">Newsletter</a>
+                    <a href="#about">About</a>
+                </nav>
+                <a class="button ghost" href="#newsletter">Subscribe</a>
+            </header>
+
+            <main>
+                <section class="hero collage reveal">
+                    <div class="hero-copy">
+                        <p class="eyebrow">January 2026</p>
+                        <h1>Literally Just a Girl</h1>
+                        <p class="lead">A cozy space to explore, connect, and grow. I am sharing updates, playlists, and the soft moments that feel like home.</p>
+                        <div class="hero-actions">
+                            <a class="button" href="#posts">Read the latest post</a>
+                            <a class="button ghost" href="#updates">See what I am up to</a>
+                        </div>
+                        <form id="subscribe-form" class="inline-form">
+                            <input type="email" id="email-input" placeholder="your email" required>
+                            <button type="submit" class="button">Join the newsletter</button>
+                            <p id="subscribe-msg" class="form-msg"></p>
+                        </form>
+                    </div>
+
+                    <div class="collage-board">
+                        <div class="sticker music">
+                            <p class="tiny">Playlists</p>
+                            <p class="music-title">2000s Hits</p>
+                            <div class="music-circle"></div>
+                            <div class="music-line"></div>
+                        </div>
+                        <div class="sticker notebook">
+                            <div class="tape"></div>
+                            <div class="notebook-lines"></div>
+                        </div>
+                        <div class="sticker sparkle">✶ ✶ ✶</div>
+                        <div class="sticker megaphone">📣</div>
+                        <div class="sticker sticky-note">
+                            <p>A cozy space<br>to explore,<br>connect and<br>grow!</p>
+                        </div>
+                        <div class="sticker signpost">
+                            <span>updates</span>
+                            <span>letters</span>
+                        </div>
+                        <div class="sticker fortune">
+                            <div class="fortune-cookie"></div>
+                            <div class="fortune-strip"></div>
+                        </div>
+                        <div class="sticker envelope">
+                            <span>open with care</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="updates" class="section reveal delay-1">
+                    <div class="section-heading">
+                        <h2>What I am up to</h2>
+                        <p>Little life updates, soft goals, and the vibes of the week.</p>
+                    </div>
+                    <div class="grid">
+                        <article class="card">
+                            <h3>Glow-up goals</h3>
+                            <p>Daily walks, journal check-ins, and trying new recipes without the pressure.</p>
+                            <div class="pill-row">
+                                <span class="pill">self-care</span>
+                                <span class="pill">movement</span>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <h3>Creative projects</h3>
+                            <p>Designing postcards, building this blog, and collecting song snippets.</p>
+                            <div class="pill-row">
+                                <span class="pill">creative</span>
+                                <span class="pill">digital diary</span>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <h3>Friendship energy</h3>
+                            <p>Writing letters, sending voice notes, and planning a picnic.</p>
+                            <div class="pill-row">
+                                <span class="pill">friends</span>
+                                <span class="pill">letters</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="posts" class="section reveal delay-2">
+                    <div class="section-heading">
+                        <h2>Latest blog notes</h2>
+                        <p>Fresh posts you can read in five minutes or less.</p>
+                    </div>
+                    <div class="post-list">
+                        <article class="post card">
+                            <div>
+                                <p class="post-date">January 19, 2026</p>
+                                <h3>How I am building a softer schedule</h3>
+                                <p>Notes on routines that feel kind instead of strict.</p>
+                            </div>
+                            <a class="link" href="#">Read more</a>
+                        </article>
+                        <article class="post card">
+                            <div>
+                                <p class="post-date">January 14, 2026</p>
+                                <h3>Little things that made this week sparkle</h3>
+                                <p>A coffee shop playlist, a new thrift find, and the sunset I did not expect.</p>
+                            </div>
+                            <a class="link" href="#">Read more</a>
+                        </article>
+                        <article class="post card">
+                            <div>
+                                <p class="post-date">January 08, 2026</p>
+                                <h3>Letters I am sending this month</h3>
+                                <p>Stationery picks and prompts if you want to write too.</p>
+                            </div>
+                            <a class="link" href="#">Read more</a>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="newsletter" class="section newsletter reveal delay-3">
+                    <div class="section-heading">
+                        <h2>Join the newsletter 💌</h2>
+                        <p>Weekly updates, playlist drops, and a gentle reminder to text your friends back.</p>
+                    </div>
+                    <div class="newsletter-card card">
+                        <form class="stack-form" id="newsletter-form">
+                            <label for="newsletter-email">Email address</label>
+                            <input type="email" id="newsletter-email" placeholder="hello@friend.com" required>
+                            <button class="button" type="submit">Subscribe to the Friday letter</button>
+                            <p class="form-msg" id="newsletter-msg"></p>
+                        </form>
+                        <div class="newsletter-details">
+                            <h3>What you will get</h3>
+                            <ul>
+                                <li>Monthly recap + mini photo diary.</li>
+                                <li>Updates on what I am building or learning.</li>
+                                <li>Links to everything I am loving.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about" class="section reveal delay-4">
+                    <div class="section-heading">
+                        <h2>About this space</h2>
+                        <p>This blog is a public note to my friends. Soft, honest, and always in progress.</p>
+                    </div>
+                    <div class="grid">
+                        <article class="card">
+                            <h3>Why I made it</h3>
+                            <p>So I can share updates without ten group chats and keep my favorite moments in one place.</p>
+                        </article>
+                        <article class="card">
+                            <h3>How to reach me</h3>
+                            <p>Send a hello, a meme, or a voice note. I love hearing from you.</p>
+                            <a class="link" href="mailto:hello@literallyjustagirl.com">hello@literallyjustagirl.com</a>
+                        </article>
+                        <article class="card">
+                            <h3>Share your own news</h3>
+                            <p>Reply to any newsletter and I will add your updates to the next friend round-up.</p>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="site-footer">
+                <p>made with love & soft playlists 🧠❤️</p>
+            </footer>
+        </div>
     </div>
 
-
-    <!-- 🔓 MAIN CONTENT (Hidden at first) -->
-    <div id="main-content" class="hidden">
-
-        <!-- HEADER -->
-        <header>
-            <h1>Literally Just a Girl</h1>
-            <p>A cozy space for girls to explore, connect, and grow.</p>
-
-            <nav>
-                <a href="#penpals">Pen Pals</a>
-                <a href="#shopping">Shopping</a>
-                <a href="#therapy">Therapy</a>
-            </nav>
-        </header>
-
-
-        <!-- MAIN SECTIONS -->
-        <section class="grid-container">
-
-            <!-- Penpals Section -->
-            <div id="penpals" class="grid-item">
-                <h2>Pen Pals</h2>
-                <p>Make friends from across the world through letters!</p>
-            </div>
-
-            <!-- Shopping Section -->
-            <div id="shopping" class="grid-item">
-                <h2>Shopping Finds 🛍️</h2>
-                <p>Find the cutest items on sale, curated just for you.</p>
-            </div>
-
-            <!-- Therapy Section -->
-            <div id="therapy" class="grid-item">
-                <h2>Therapy Thoughts 🌱</h2>
-                <p>A place for mental health, soft reflection, and real talk.</p>
-            </div>
-
-        </section>
-
-
-        <!-- NEWSLETTER SUBSCRIBE FORM -->
-        <section>
-            <h2>Join the Newsletter 💌</h2>
-            <p>Drop your email to join Waffle Wednesday & weekly updates:</p>
-
-            <form id="subscribe-form">
-                <input type="email" id="email-input" placeholder="your email" required>
-                <button type="submit">Subscribe</button>
-                <p id="subscribe-msg"></p>
-            </form>
-
-            <!-- OPTIONAL: Instead of the form above, you can embed a Google Form -->
-            <!-- <iframe src="YOUR_GOOGLE_FORM_EMBED_URL" width="100%" height="500" frameborder="0"></iframe> -->
-        </section>
-
-
-        <!-- FOOTER -->
-        <footer>
-            <p>made with love & overthinking 🧠❤️</p>
-        </footer>
-
-    </div> <!-- end main content -->
-
-
-    <!-- Your JavaScript -->
     <script src="script.js"></script>
-
 </body>
 </html>
